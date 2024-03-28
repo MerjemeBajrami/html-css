@@ -1,0 +1,906 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.first {
+    background-image: url(assets/p1.JPG);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 900px;
+}
+
+header {
+
+    color: #fff;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+header a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+.logo {
+    width: 100px;
+}
+
+
+
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative; /* Ensure relative positioning for absolute positioning of ::after */
+}
+
+.nav ul li {
+    margin-right: 20px;
+    padding: 5px;
+    position: relative; /* Ensure relative positioning for absolute positioning of ::after */
+}
+
+.nav ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the list item */
+    left: 0;
+    width: 0; /* Initially set width to 0 */
+    height: 1px; /* Set height */
+    background-color: #fff; /* Set color of the line */
+    transition: width 0.3s ease; /* Transition only the width */
+}
+
+.nav ul li:hover::after {
+    width: 100%; /* Expand the line to the full width of the list item */
+}
+
+
+/* Language and Sign Up Styles */
+.lang-signup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+   
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+
+.btnsign {
+    align-items: center;
+    appearance: none;
+    background-color: #3EB2FD;
+    background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    background-size: calc(100% + 20px) calc(100% + 20px);
+    border-radius: 100px;
+    border-width: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: CircularStd, sans-serif;
+    font-size: 1rem;
+    height: auto;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s, background-position .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.btnsign:active,
+.btnsign:focus {
+    outline: none;
+}
+
+.btnsign:hover {
+    background-position: -20px -20px;
+}
+
+.btnsign:focus:not(:active) {
+    box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+.main {
+    width: 70%;
+    margin: 130px auto;
+    height: 900px;
+    padding: 30px;
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(53, 57, 57, 1);
+
+}
+
+main p {
+    text-align: center;
+
+}
+.pinmain{
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.search {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+    gap: 5%;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 100px;
+    position: relative;
+
+
+
+}
+
+.btnsearch {
+    align-items: center;
+    appearance: none;
+    background-color: #3EB2FD;
+    background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    background-size: calc(100%+20px) calc(100%+20px);
+
+    border-radius: 100px;
+    border-width: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: CircularStd, sans-serif;
+    font-size: 1rem;
+    height: auto;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+    margin-left: 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s, background-position .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+   align-self: center;
+
+}
+
+.btnsearch:active,
+.btnsearch:focus {
+    outline: none;
+}
+
+.btnsearch:hover {
+    background-position: -20px -20px;
+}
+
+.btnsearch:focus:not(:active) {
+    box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+/* Dropdown container */
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 3px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 100px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #92e2ec
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 20px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+
+
+
+.dropbtn1 {
+
+    background-color: transparent;
+    color: aliceblue;
+    padding: 3px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content1 a:hover {
+    background-color: #92e2ec;
+    border-radius: 100px;
+   
+}
+.text1 p,
+.text1 h3,
+.text1 button,
+.text2 p,
+.text2 h3,
+.text2 button {
+    margin-top: 20px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown1:hover .dropdown-content1  p{
+    display: block;
+    border-radius: 20px;
+ 
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown1:hover .dropbtn {
+    background-color: #92e2ec;
+    border-radius: 100px;
+    padding: 3px;
+
+
+}
+
+
+
+
+  
+.vl {
+    border-left: 5px solid rgb(81, 136, 175);
+    height: 100px;
+  }
+section{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.section1 {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px 30px;
+}
+
+.mostpopular {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust margin for the inner elements */
+.mostpopular > * {
+    margin: 0 10px; /* Adjust as needed */
+}
+
+.mostpopular p,
+.mostpopular h4{
+    margin-left: 30px;
+    
+}
+.mostpopular p{
+    display: inline-block;
+    width:70%
+
+}
+.mostpopular h3{
+    display: inline-block;
+    width:70%
+
+}
+
+
+.section1 h3{
+    font-size: 30px;
+    font-family: "Ubuntu", sans-serif;
+}
+.section1 p ,
+.section1 h4{
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+}
+.imgcollection img{
+    width: 250px;
+
+}
+
+.imgcollection{
+   
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    height: 400px;
+  
+}
+.imgcollection img{
+    border-radius: 10px;
+    
+}
+.imgcollection .bck{
+    width: 300px;
+    height: 350px;
+    background-color: #fcfeff;
+    
+   display: flex;
+   justify-content: center;
+   padding: 25px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.bck{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.bck p, 
+.bck h3,
+.bck .arrow, 
+.bck button
+{
+    margin-top: 8px;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+}
+.bck:hover {
+    transform: scale(1.03);
+}
+ 
+
+ 
+
+
+
+.bck:hover::before {
+    opacity: 1;
+}
+
+/* Descendant selectors to target only elements within .bck */
+.bck:hover p ::before,
+.bck:hover h3 ::before,
+.bck:hover .arrow ::before,
+.bck:hover button ::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: transform 10s ease;
+    /* Add specific styles here */
+}
+
+
+
+
+
+
+
+  
+.travel1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 150px;
+    align-items: center;
+
+ }
+.travel img{
+    width: 370px;
+}
+.travel h3{
+    font-size: 30px;
+    font-family: "Ubuntu", sans-serif;
+}
+.travel p,
+.travel button{
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+}
+.travel{
+    width: 80%;
+}
+.travel2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 150px;
+    align-items: center;
+
+ }
+
+
+.section3{
+    width: 100%;
+    background-image: url(assets/ssection22bg.PNG);
+    display: flex;
+    justify-content: center;
+    background-size: 100%;
+}
+.getapp{
+    width: 140px;
+}
+.sponsors{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.brands {
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 10px; /* Gap between grid items */
+}
+.grid-item {
+    width: 150px;
+    height: 90px; /* Set a fixed height */
+   
+    text-align: center;
+}
+.grid-item:nth-child(6),
+.grid-item:nth-child(10) {
+    display: none; /* Hiding the 6th and 10th items */
+}
+.divimg{
+    width: 150px;
+    height: 100px;
+}
+.sponsors p{
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+
+}
+
+.arrow {
+    border: solid aliceblue;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+   
+
+  }
+
+.arrow1 {
+    border: solid rgb(0, 0, 0);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+   
+
+  }
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+
+.lastsec {
+   margin-top: 150px;
+    width: 100%;
+    height: 100%; 
+    text-align: center;
+}
+.lastsec h3{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+     margin-bottom: 13px;
+
+}
+.lastbackground p{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-bottom: 13px;
+
+}
+
+.lastbackground {
+    background-image: url(assets/lastsection.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height:700px;
+  /* Adjust this value as needed */
+}
+
+
+footer {
+    width: 100%;
+    background-color: rgb(20, 36, 87);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 40px;
+    
+}
+.footer-column a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+.details{
+    margin-left: 120px;
+    flex:3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer{
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    header{
+        padding-left: 10px;
+    }
+    .nav ul {
+        display: none; /* Hide regular navigation links */
+    }.search{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        width: 180px;
+       
+        height:500px;
+       text-align: center;
+       margin: 0 auto;
+    
+    }
+
+   
+    h2{
+       
+        font-size: 25px;
+    }
+    .main{
+        margin: 70px auto;
+        padding: 0;
+
+    }
+    .main h2{
+        margin-bottom: 35px;
+       
+    }
+    .section1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        height: 3;
+       text-align: center;
+       margin-bottom: 100px;
+    }
+  
+   
+
+    .mostpopular {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        text-align: center; /* Center text horizontally */
+       
+    }
+
+    /* Center h3 horizontally */
+    .mostpopular h3 {
+        text-align: center;
+    }
+    .mostpopular p{
+        margin-left: 0px;
+    }
+    .vl{
+       
+        border-left: 0px;
+        margin-top:10px ;
+        margin-bottom: 25px;
+    border-top: 5px solid rgb(81, 136, 175); /* Use border-top instead of border-left */
+    width: 300px; /* Set the width */
+    height: 10px;
+
+    }
+    
+    
+   .pinmain{
+    display: none;
+    width: 70%;
+      
+
+    }
+    .imgcollection{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        margin-bottom: 30px;
+    }
+    .travel1{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .travel2{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+    .brands {
+        width: 100%;
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-rows: repeat(4, auto); /* 4 rows */
+        gap: 10px; /* Gap between grid items */
+    }
+    .lastbackground {
+      
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 400px;
+      /* Adjust this value as needed */
+    }
+    .lastsec{
+        margin-top: 80px;
+    }
+    .lastsec h3{
+        font-size: 15px;
+    }
+    .lastsec p{
+        font-size: 7px;
+    }
+    .details{
+        display: none;
+    }
+    .footer-column h4{
+        display: none;
+
+    }
+    .footer-column{
+        text-align: center;
+    }
+    .divimg{
+        display: none;
+    }
+        
+
+    
+}
+@media only screen and (min-width: 767px) and (max-width: 1000px) {
+    .imgcollection {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next row */
+        gap: 8px; /* Gap between items */
+        justify-content: center;
+        height: 400px;
+        height: fit-content;
+        margin-bottom: 40px;
+    }
+    
+    
+    .imgcollection .grid-item {
+        flex-basis: calc(50% - 4px); /* Set width for each item to occupy half of the container's width with gap included */
+        height: 200px; /* Set a fixed height for each item */
+    }
+    .travel img{
+        width: 300px;
+    }
+    .travel h3{
+        font-size: 20px;
+    }
+    .travel p{
+        font-size: 10px;
+    }
+    .brands {
+        width: 100%;
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 2 columns */
+        grid-template-rows: repeat(2, auto); /* 4 rows */
+        gap: 10px; /* Gap between grid items */
+    }
+    .divimg{
+        display: none;
+    }
+    .lastbackground {
+      
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 400px;
+      /* Adjust this value as needed */
+    }
+    .lastsec{
+        margin-top: 80px;
+    }
+    .lastsec h3{
+        font-size: 20px;
+    }
+    .lastsec p{
+        font-size: 10px;
+    }
+    .search{
+        padding:0px 10px;
+    }
+    
+
+}
